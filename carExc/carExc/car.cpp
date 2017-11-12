@@ -55,7 +55,6 @@ void Car::SetModel(string m)
 	}
 }
 
-
 void Car::SetYear(int y)
 {
 	year = y;
@@ -71,7 +70,7 @@ void Car::SetColor(char* co)
 	strcpy_s(color, 10, co);
 }
 
-Car & Car::CompareByYear(Car & c2)
+const Car & Car::CompareByYear(const Car & c2)
 {
 	if (year >= c2.year)
 	{
@@ -83,7 +82,7 @@ Car & Car::CompareByYear(Car & c2)
 	}
 }
 
-Car & Car::CompareByEngineVolume(Car & c2)
+const Car & Car::CompareByEngineVolume(const Car & c2)
 {
 	if (engineVolume >= c2.engineVolume)
 	{
