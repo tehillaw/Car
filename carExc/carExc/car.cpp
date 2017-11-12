@@ -45,6 +45,7 @@ void Car::SetMake(string m)
 		make = m;
 	}
 }
+
 void Car::SetModel(string m)
 {
 	assert(m != "");
@@ -53,20 +54,24 @@ void Car::SetModel(string m)
 		model = m;
 	}
 }
+
+
 void Car::SetYear(int y)
 {
 	year = y;
 }
+
 void Car::SetEngineVolume(int e)
 {
 	engineVolume = e;
 }
+
 void Car::SetColor(char* co)
 {
 	strcpy_s(color, 10, co);
 }
 
-Car Car::CompareByYear(Car & c2)
+Car & Car::CompareByYear(Car & c2)
 {
 	if (year >= c2.year)
 	{
@@ -78,7 +83,7 @@ Car Car::CompareByYear(Car & c2)
 	}
 }
 
-Car Car::CompareByEngineVolume(Car & c2)
+Car & Car::CompareByEngineVolume(Car & c2)
 {
 	if (engineVolume >= c2.engineVolume)
 	{

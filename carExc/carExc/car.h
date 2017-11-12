@@ -16,11 +16,11 @@ public:
 	void SetYear(int);
 	void SetEngineVolume(int);
 	void SetColor(char*);
-	Car(string m, string mo,int y,int eV,char* co);
+	Car(string m, string mo, int y, int eV, char* co);
 	Car();
 	~Car();
 	friend std::ostream& operator<< (std::ostream& stream, const Car& c);
-	Car CompareByYear(Car & c2);
-	Car CompareByEngineVolume(Car & c2);
+	Car & CompareByYear(Car & c2);
+	Car & CompareByEngineVolume(Car & c2);
 };
 
